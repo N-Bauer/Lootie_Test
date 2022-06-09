@@ -22,7 +22,6 @@
             path: 'ball-001.json' // the path to the animation json
         });
 
-        maxFrame = l.getDuration(true);
         l.goToAndStop(0, true);
 
         function test() {
@@ -40,6 +39,8 @@
                 e.code == "Space" ||      
                 e.keyCode == 32      
             ) {
+                maxFrame = l.getDuration(true);
+                
                 currFrame+=2;
                 if(currFrame >= maxFrame) currFrame = 0;
                 l.goToAndStop(currFrame, true);
