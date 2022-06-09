@@ -45,7 +45,7 @@
                 currFrame+=speed;
                 if(currFrame >= maxFrame) {
                     currFrame = 0;
-                    l.goToAndStop(maxFrame, true);
+                    l.goToAndStop(maxFrame-1, true);
                 } else {
                     l.goToAndStop(currFrame, true);
                 }
