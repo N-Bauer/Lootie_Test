@@ -13,6 +13,7 @@
         let state = 1;
         let maxFrame = 0;
         let currFrame = 0;
+        let speed = 10;
 
         var l = lottie.loadAnimation({
             container: document.getElementById("lootie"), // the dom element that will contain the animation
@@ -41,7 +42,7 @@
             ) {
                 maxFrame = l.getDuration(true);
 
-                currFrame+=6;
+                currFrame+=speed;
                 if(currFrame >= maxFrame) {
                     currFrame = 0;
                     l.goToAndStop(maxFrame, true);
