@@ -10,16 +10,40 @@
         <button onclick="test();">TEST</button>
     </body>
     <script>
+        let state = 1;
+        let maxFrame = 0;
+        let currFrame = 0;
+
         var l = lottie.loadAnimation({
             container: document.getElementById("lootie"), // the dom element that will contain the animation
             renderer: 'svg',
             loop: true,
-            autoplay: true,
+            autoplay: false,
             path: 'ball-001.json' // the path to the animation json
         });
 
+        maxFrame = l.getDuration(true);
+        l.goToAndStop(0, true);
+
         function test() {
-            l.pause();
+            if(state) {
+                l.pause();
+                state = 0;
+            } else {
+                l.play();
+                state = 1;
+            }
+        }
+
+        document.body.onkeyup = function(e) {
+        if (e.key == " " ||
+                e.code == "Space" ||      
+                e.keyCode == 32      
+            ) {
+                //your code
+                currFrame++;
+                l.goToAndStop(currFrame, true);
+            }
         }
     </script>
 </html>
