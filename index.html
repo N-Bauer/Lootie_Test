@@ -7,7 +7,7 @@
         <div id="lootie" style="width: 30vw; height: 30vh;">
 
         </div>
-        <button onclick="test();">TEST</button>
+        <button onclick="test();">PLAY / PAUSE</button>
     </body>
     <script>
         let state = 1;
@@ -40,10 +40,14 @@
                 e.keyCode == 32      
             ) {
                 maxFrame = l.getDuration(true);
-                
-                currFrame+=2;
-                if(currFrame >= maxFrame) currFrame = 0;
-                l.goToAndStop(currFrame, true);
+
+                currFrame+=6;
+                if(currFrame >= maxFrame) {
+                    currFrame = 0;
+                    l.goToAndStop(maxFrame, true);
+                } else {
+                    l.goToAndStop(currFrame, true);
+                }
             }
         }
     </script>
