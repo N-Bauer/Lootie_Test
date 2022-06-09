@@ -7,14 +7,19 @@
         <div id="lootie" style="width: 30vw; height: 30vh;">
 
         </div>
+        <button onclick="test();">TEST</button>
     </body>
     <script>
-        lottie.loadAnimation({
+        var l = lottie.loadAnimation({
             container: document.getElementById("lootie"), // the dom element that will contain the animation
             renderer: 'svg',
             loop: true,
             autoplay: true,
             path: 'ball-001.json' // the path to the animation json
         });
+
+        function test() {
+            l.pause();
+        }
     </script>
 </html>
