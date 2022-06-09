@@ -18,9 +18,8 @@
 
             </div>
             <button onclick="test();">PLAY / PAUSE</button>
-
-            <label for="customRange1" class="form-label">Brzina animacije prilikom igranja (0-10)</label>
-            <input type="range" class="form-range" id="brzinaAnim" min="1" max="10">
+            <br>
+            
         </div>
         
 
@@ -30,7 +29,7 @@
         let state = 1;
         let maxFrame = 0;
         let currFrame = 0;
-        let speed = 10;
+        let speed = 8;
 
         var l = lottie.loadAnimation({
             container: document.getElementById("lootie"), // the dom element that will contain the animation
