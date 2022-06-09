@@ -40,9 +40,9 @@
                 e.code == "Space" ||      
                 e.keyCode == 32      
             ) {
-                //your code
                 currFrame+=2;
                 if(currFrame > maxFrame) currFrame = 0;
+
                 l.goToAndStop(currFrame, true);
             }
         }
