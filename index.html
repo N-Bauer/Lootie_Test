@@ -57,7 +57,7 @@
         }
 
         document.body.onkeyup = function(e) {
-        if (e.key == " " ||
+            if (e.key == " " ||
                 e.code == "Space" ||      
                 e.keyCode == 32      
             ) {
@@ -75,26 +75,26 @@
     </script>
 
     <script>
-        var mac = 1;
-        var lopta = 1;
+        var macState = 1;
+        var loptaState = 1;
 
         function mac() {
-            if(mac) {
+            if(macState) {
                 $("#sword").hide();
-                mac = 0;
+                macState = 0;
             } else {
                 $("#sword").show();
-                mac = 1;
+                macState = 1;
             }
         }
 
         function lopta() {
-            if(lopta) {
+            if(loptaState) {
                 $("#01-orbiting-front").hide();
-                lopta = 0;
+                loptaState = 0;
             } else {
                 $("#01-orbiting-front").show();
-                lopta = 1;
+                loptaState = 1;
             }
         }
     </script>
