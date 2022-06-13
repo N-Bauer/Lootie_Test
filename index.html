@@ -40,7 +40,7 @@
             container: document.getElementById("lootie"), // the dom element that will contain the animation
             renderer: 'svg',
             loop: true,
-            autoplay: false,
+            autoplay: true,
             path: 'prava_animacija.json' // the path to the animation json
         });
 
@@ -90,10 +90,10 @@
 
         function lopta() {
             if(loptaState) {
-                $("#01-orbiting-front, #01-orbiting-back").hide();
+                $("#01-orbiting-front, #02-orbiting-back").hide();
                 loptaState = 0;
             } else {
-                $("#01-orbiting-front, #01-orbiting-back").show();
+                $("#01-orbiting-front, #02-orbiting-back").show();
                 loptaState = 1;
             }
         }
