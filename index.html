@@ -19,6 +19,10 @@
             </div>
             <button onclick="test();">PLAY / PAUSE</button>
             <br>
+            <hr>
+            <p class="lead">Samo za mac animaciju kontrole</p><br>
+            <button onclick="mac();">Prikazi / Sakri mac</button>
+            <button onclick="lopta();">Prikazi / Sakri malu loptu</button>
             
         </div>
         
@@ -67,6 +71,25 @@
                     l.goToAndStop(currFrame, true);
                 }
             }
+        }
+    </script>
+
+    <script>
+        var mac = 1;
+        var lopta = 1;
+
+        function mac() {
+            if(mac) {
+                $("#mac").hide();
+                mac = 0;
+            } else {
+                $("#mac").show();
+                mac = 1;
+            }
+        }
+
+        function lopta() {
+
         }
     </script>
 </html>
